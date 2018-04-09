@@ -2,7 +2,7 @@
 
 Abella
 - API version: 1.0
-  - Build date: 2018-03-30T14:10:18.057-06:00
+  - Build date: 2018-04-09T15:57:22.781-05:00
 
 Partner API application
 
@@ -75,24 +75,23 @@ Please follow the [installation](#installation) instruction and execute the foll
 import io.prompto.sdk.api.*;
 import io.prompto.sdk.api.auth.*;
 import io.prompto.sdk.model.*;
-import io.prompto.sdk.api.InvoiceUiResourceApi;
+import io.prompto.sdk.api.CampaignUiResourceApi;
 
 import java.io.File;
 import java.util.*;
 
-public class InvoiceUiResourceApiExample {
+public class CampaignUiResourceApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-
-        InvoiceUiResourceApi apiInstance = new InvoiceUiResourceApi();
-        String invoiceId = "invoiceId_example"; // String | invoiceId
+        CampaignUiResourceApi apiInstance = new CampaignUiResourceApi(defaultClient);
+        String campaignId = "campaignId_example"; // String | campaignId
         try {
-            InvoiceResponse result = apiInstance.getUsingGET(invoiceId);
+            CampaignResponse result = apiInstance.deleteUsingPOST(campaignId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling InvoiceUiResourceApi#getUsingGET");
+            System.err.println("Exception when calling CampaignUiResourceApi#deleteUsingPOST");
             e.printStackTrace();
         }
     }
@@ -102,53 +101,101 @@ public class InvoiceUiResourceApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost:8080/web-ui-api*
+All URIs are relative to *https://https://prompto.io/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*InvoiceUiResourceApi* | [**getUsingGET**](docs/InvoiceUiResourceApi.md#getUsingGET) | **GET** /api/v1/invoices/{invoiceId} | get
-*InvoiceUiResourceApi* | [**listUsingGET**](docs/InvoiceUiResourceApi.md#listUsingGET) | **GET** /api/v1/invoices | list
+*CampaignUiResourceApi* | [**deleteUsingPOST**](docs/CampaignUiResourceApi.md#deleteUsingPOST) | **POST** /api/v1/campaigns/{campaignId}/stop | delete
+*CampaignUiResourceApi* | [**getUsingGET**](docs/CampaignUiResourceApi.md#getUsingGET) | **GET** /api/v1/campaigns/{campaignId} | get
+*CampaignUiResourceApi* | [**listUsingGET**](docs/CampaignUiResourceApi.md#listUsingGET) | **GET** /api/v1/campaigns | list
+*CampaignUiResourceApi* | [**publishUsingPOST**](docs/CampaignUiResourceApi.md#publishUsingPOST) | **POST** /api/v1/campaigns/{campaignId}/publish | publish
+*CampaignUiResourceApi* | [**saveUsingPOST**](docs/CampaignUiResourceApi.md#saveUsingPOST) | **POST** /api/v1/campaigns | save
+*CampaignUiResourceApi* | [**unpublishUsingPOST**](docs/CampaignUiResourceApi.md#unpublishUsingPOST) | **POST** /api/v1/campaigns/{campaignId}/invite | unpublish
+*CampaignUiResourceApi* | [**unpublishUsingPOST1**](docs/CampaignUiResourceApi.md#unpublishUsingPOST1) | **POST** /api/v1/campaigns/{campaignId}/unpublish | unpublish
+*CampaignUiResourceApi* | [**updateUsingPOST**](docs/CampaignUiResourceApi.md#updateUsingPOST) | **POST** /api/v1/campaigns/{campaignId} | update
+*DonationUiResourceApi* | [**cancelUsingPOST**](docs/DonationUiResourceApi.md#cancelUsingPOST) | **POST** /api/v1/donations/{donationId}/cancel | cancel
+*DonationUiResourceApi* | [**listUsingGET1**](docs/DonationUiResourceApi.md#listUsingGET1) | **GET** /api/v1/donations | list
+*InstallmentsUiResourceApi* | [**advancePaymentUsingPOST**](docs/InstallmentsUiResourceApi.md#advancePaymentUsingPOST) | **POST** /api/v1/installments/{id}/advance-payment | advancePayment
+*InstallmentsUiResourceApi* | [**createUsingPOST**](docs/InstallmentsUiResourceApi.md#createUsingPOST) | **POST** /api/v1/installments | create
+*InstallmentsUiResourceApi* | [**getAmortizationUsingGET**](docs/InstallmentsUiResourceApi.md#getAmortizationUsingGET) | **GET** /api/v1/installments/{id}/amortization | getAmortization
+*InstallmentsUiResourceApi* | [**getUsingGET1**](docs/InstallmentsUiResourceApi.md#getUsingGET1) | **GET** /api/v1/installments/{id} | get
+*InstallmentsUiResourceApi* | [**listUsingGET2**](docs/InstallmentsUiResourceApi.md#listUsingGET2) | **GET** /api/v1/installments | list
+*InvoiceUiResourceApi* | [**attachFileUsingPOST**](docs/InvoiceUiResourceApi.md#attachFileUsingPOST) | **POST** /api/v1/invoices/{invoiceId}/attach | attachFile
+*InvoiceUiResourceApi* | [**cancelInvoiceUsingPOST**](docs/InvoiceUiResourceApi.md#cancelInvoiceUsingPOST) | **POST** /api/v1/invoices/{invoiceId}/cancel | cancelInvoice
+*InvoiceUiResourceApi* | [**clearInvoiceUsingPOST**](docs/InvoiceUiResourceApi.md#clearInvoiceUsingPOST) | **POST** /api/v1/invoices/{invoiceId}/clear | clearInvoice
+*InvoiceUiResourceApi* | [**createInvoiceUsingPOST**](docs/InvoiceUiResourceApi.md#createInvoiceUsingPOST) | **POST** /api/v1/invoices/create | createInvoice
+*InvoiceUiResourceApi* | [**downloadUsingGET**](docs/InvoiceUiResourceApi.md#downloadUsingGET) | **GET** /api/v1/invoices/{invoiceId}/pdf | download
+*InvoiceUiResourceApi* | [**getDetailUsingGET**](docs/InvoiceUiResourceApi.md#getDetailUsingGET) | **GET** /api/v1/invoices/{invoiceId} | getDetail
+*InvoiceUiResourceApi* | [**listUsingGET3**](docs/InvoiceUiResourceApi.md#listUsingGET3) | **GET** /api/v1/invoices | list
 *PartnerUserUiResourceApi* | [**activateUsingPOST**](docs/PartnerUserUiResourceApi.md#activateUsingPOST) | **POST** /api/v1/partner-users/{userId}/activate | activate
-*PartnerUserUiResourceApi* | [**createUsingPOST**](docs/PartnerUserUiResourceApi.md#createUsingPOST) | **POST** /api/v1/partner-users | create
+*PartnerUserUiResourceApi* | [**createUsingPOST1**](docs/PartnerUserUiResourceApi.md#createUsingPOST1) | **POST** /api/v1/partner-users | create
 *PartnerUserUiResourceApi* | [**deactivateUsingPOST**](docs/PartnerUserUiResourceApi.md#deactivateUsingPOST) | **POST** /api/v1/partner-users/{userId}/deactivate | deactivate
-*PartnerUserUiResourceApi* | [**deleteUsingPOST**](docs/PartnerUserUiResourceApi.md#deleteUsingPOST) | **POST** /api/v1/partner-users/{userId}/delete | delete
-*PartnerUserUiResourceApi* | [**getUsingGET1**](docs/PartnerUserUiResourceApi.md#getUsingGET1) | **GET** /api/v1/partner-users/{userId} | get
-*PartnerUserUiResourceApi* | [**listUsingGET1**](docs/PartnerUserUiResourceApi.md#listUsingGET1) | **GET** /api/v1/partner-users | list
-*PartnerUserUiResourceApi* | [**updateUsingPOST**](docs/PartnerUserUiResourceApi.md#updateUsingPOST) | **POST** /api/v1/partner-users/{userId} | update
-*PlanUiResourceApi* | [**deleteUsingPOST1**](docs/PlanUiResourceApi.md#deleteUsingPOST1) | **POST** /api/v1/plans/{planId}/delete | delete
-*PlanUiResourceApi* | [**getUsingGET2**](docs/PlanUiResourceApi.md#getUsingGET2) | **GET** /api/v1/plans/{planId} | get
-*PlanUiResourceApi* | [**listUsingGET2**](docs/PlanUiResourceApi.md#listUsingGET2) | **GET** /api/v1/plans | list
-*PlanUiResourceApi* | [**publishUsingPOST**](docs/PlanUiResourceApi.md#publishUsingPOST) | **POST** /api/v1/plans/{planId}/publish | publish
-*PlanUiResourceApi* | [**saveUsingPOST**](docs/PlanUiResourceApi.md#saveUsingPOST) | **POST** /api/v1/plans | save
-*PlanUiResourceApi* | [**unpublishUsingPOST**](docs/PlanUiResourceApi.md#unpublishUsingPOST) | **POST** /api/v1/plans/{planId}/unpublish | unpublish
-*PlanUiResourceApi* | [**updateUsingPOST1**](docs/PlanUiResourceApi.md#updateUsingPOST1) | **POST** /api/v1/plans/{planId} | update
-*UserUiResourceApi* | [**getUsingGET3**](docs/UserUiResourceApi.md#getUsingGET3) | **GET** /api/v1/users/{userId} | get
-*UserUiResourceApi* | [**listUsingGET3**](docs/UserUiResourceApi.md#listUsingGET3) | **GET** /api/v1/users | list
+*PartnerUserUiResourceApi* | [**deleteUsingPOST1**](docs/PartnerUserUiResourceApi.md#deleteUsingPOST1) | **POST** /api/v1/partner-users/{userId}/delete | delete
+*PartnerUserUiResourceApi* | [**getUsingGET2**](docs/PartnerUserUiResourceApi.md#getUsingGET2) | **GET** /api/v1/partner-users/{userId} | get
+*PartnerUserUiResourceApi* | [**listUsingGET4**](docs/PartnerUserUiResourceApi.md#listUsingGET4) | **GET** /api/v1/partner-users | list
+*PartnerUserUiResourceApi* | [**updateUsingPOST1**](docs/PartnerUserUiResourceApi.md#updateUsingPOST1) | **POST** /api/v1/partner-users/{userId} | update
+*PlanUiResourceApi* | [**deleteUsingPOST2**](docs/PlanUiResourceApi.md#deleteUsingPOST2) | **POST** /api/v1/plans/{planId}/delete | delete
+*PlanUiResourceApi* | [**getUsingGET3**](docs/PlanUiResourceApi.md#getUsingGET3) | **GET** /api/v1/plans/{planId} | get
+*PlanUiResourceApi* | [**listUsingGET5**](docs/PlanUiResourceApi.md#listUsingGET5) | **GET** /api/v1/plans | list
+*PlanUiResourceApi* | [**publishUsingPOST1**](docs/PlanUiResourceApi.md#publishUsingPOST1) | **POST** /api/v1/plans/{planId}/publish | publish
+*PlanUiResourceApi* | [**saveUsingPOST1**](docs/PlanUiResourceApi.md#saveUsingPOST1) | **POST** /api/v1/plans | save
+*PlanUiResourceApi* | [**unpublishUsingPOST2**](docs/PlanUiResourceApi.md#unpublishUsingPOST2) | **POST** /api/v1/plans/{planId}/unpublish | unpublish
+*PlanUiResourceApi* | [**updateUsingPOST2**](docs/PlanUiResourceApi.md#updateUsingPOST2) | **POST** /api/v1/plans/{planId} | update
+*SubscriptionUiResourceApi* | [**cancelUsingPOST1**](docs/SubscriptionUiResourceApi.md#cancelUsingPOST1) | **POST** /api/v1/subscriptions/{subscriptionId}/cancel | cancel
+*SubscriptionUiResourceApi* | [**listUsingGET6**](docs/SubscriptionUiResourceApi.md#listUsingGET6) | **GET** /api/v1/subscriptions | list
+*SubscriptionUiResourceApi* | [**subscribeUsingPOST**](docs/SubscriptionUiResourceApi.md#subscribeUsingPOST) | **POST** /api/v1/subscriptions/{userId}/subscribe | subscribe
+*UserUiResourceApi* | [**getUsingGET4**](docs/UserUiResourceApi.md#getUsingGET4) | **GET** /api/v1/users/{userId} | get
+*UserUiResourceApi* | [**listUsingGET7**](docs/UserUiResourceApi.md#listUsingGET7) | **GET** /api/v1/users | list
 
 
 ## Documentation for Models
 
  - [ACHMethod](docs/ACHMethod.md)
  - [Address](docs/Address.md)
+ - [AdvanceLoanPaymentRequest](docs/AdvanceLoanPaymentRequest.md)
+ - [AmortizationDetailsResponse](docs/AmortizationDetailsResponse.md)
+ - [ByteArrayResource](docs/ByteArrayResource.md)
+ - [Campaign](docs/Campaign.md)
+ - [CampaignListResponse](docs/CampaignListResponse.md)
+ - [CampaignRequest](docs/CampaignRequest.md)
+ - [CampaignResponse](docs/CampaignResponse.md)
+ - [CancelSubscriptionRequest](docs/CancelSubscriptionRequest.md)
+ - [ClearInvoiceRequest](docs/ClearInvoiceRequest.md)
+ - [CreateInvoiceRequest](docs/CreateInvoiceRequest.md)
+ - [CreatePersonalLoanRequest](docs/CreatePersonalLoanRequest.md)
  - [CreditCardMethod](docs/CreditCardMethod.md)
  - [CustomerUser](docs/CustomerUser.md)
+ - [Donation](docs/Donation.md)
+ - [DonationListResponse](docs/DonationListResponse.md)
+ - [InputStream](docs/InputStream.md)
+ - [InviteRequest](docs/InviteRequest.md)
  - [Invoice](docs/Invoice.md)
  - [InvoiceAttachment](docs/InvoiceAttachment.md)
+ - [InvoiceClearedResponse](docs/InvoiceClearedResponse.md)
  - [InvoiceListResponse](docs/InvoiceListResponse.md)
  - [InvoicePayment](docs/InvoicePayment.md)
  - [InvoiceResponse](docs/InvoiceResponse.md)
  - [Link](docs/Link.md)
+ - [OrderItemRequest](docs/OrderItemRequest.md)
  - [Pagination](docs/Pagination.md)
  - [PartnerUser](docs/PartnerUser.md)
  - [PartnerUserListResponse](docs/PartnerUserListResponse.md)
  - [PartnerUserRequest](docs/PartnerUserRequest.md)
  - [PartnerUserResponse](docs/PartnerUserResponse.md)
  - [PaymentIntent](docs/PaymentIntent.md)
+ - [PersonalLoan](docs/PersonalLoan.md)
+ - [PersonalLoanListResponse](docs/PersonalLoanListResponse.md)
+ - [PersonalLoanResponse](docs/PersonalLoanResponse.md)
  - [Plan](docs/Plan.md)
  - [PlanListResponse](docs/PlanListResponse.md)
  - [PlanRequest](docs/PlanRequest.md)
  - [PlanResponse](docs/PlanResponse.md)
+ - [PurchaseOrderRequest](docs/PurchaseOrderRequest.md)
  - [RestResponse](docs/RestResponse.md)
+ - [Subscription](docs/Subscription.md)
+ - [SubscriptionListResponse](docs/SubscriptionListResponse.md)
+ - [URI](docs/URI.md)
+ - [URL](docs/URL.md)
  - [UserListResponse](docs/UserListResponse.md)
  - [UserResponse](docs/UserResponse.md)
  - [ValidationError](docs/ValidationError.md)

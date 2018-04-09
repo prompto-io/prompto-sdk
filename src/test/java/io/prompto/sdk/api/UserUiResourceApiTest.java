@@ -42,9 +42,9 @@ public class UserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getUsingGET3Test() throws ApiException {
+    public void getUsingGET4Test() throws ApiException {
         String userId = null;
-        UserResponse response = api.getUsingGET3(userId);
+        UserResponse response = api.getUsingGET4(userId);
 
         // TODO: test validations
     }
@@ -58,11 +58,11 @@ public class UserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void listUsingGET3Test() throws ApiException {
+    public void listUsingGET7Test() throws ApiException {
         Integer limit = null;
         Integer offset = null;
         String q = null;
-        UserListResponse response = api.listUsingGET3(limit, offset, q);
+        UserListResponse response = api.listUsingGET7(limit, offset, q);
 
         // TODO: test validations
     }

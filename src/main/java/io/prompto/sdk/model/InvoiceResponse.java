@@ -33,7 +33,7 @@ import java.io.Serializable;
 /**
  * InvoiceResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-30T14:10:18.057-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-09T15:57:22.781-05:00")
 public class InvoiceResponse implements Serializable {
   private static final long serialVersionUID = 1L;
 

@@ -60,9 +60,9 @@ public class PartnerUserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createUsingPOSTTest() throws ApiException {
+    public void createUsingPOST1Test() throws ApiException {
         PartnerUserRequest req = null;
-        PartnerUserResponse response = api.createUsingPOST(req);
+        PartnerUserResponse response = api.createUsingPOST1(req);
 
         // TODO: test validations
     }
@@ -92,9 +92,9 @@ public class PartnerUserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void deleteUsingPOSTTest() throws ApiException {
+    public void deleteUsingPOST1Test() throws ApiException {
         String userId = null;
-        RestResponse response = api.deleteUsingPOST(userId);
+        RestResponse response = api.deleteUsingPOST1(userId);
 
         // TODO: test validations
     }
@@ -108,9 +108,9 @@ public class PartnerUserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getUsingGET1Test() throws ApiException {
+    public void getUsingGET2Test() throws ApiException {
         String userId = null;
-        PartnerUserResponse response = api.getUsingGET1(userId);
+        PartnerUserResponse response = api.getUsingGET2(userId);
 
         // TODO: test validations
     }
@@ -124,11 +124,11 @@ public class PartnerUserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void listUsingGET1Test() throws ApiException {
+    public void listUsingGET4Test() throws ApiException {
         Integer limit = null;
         Integer offset = null;
         String q = null;
-        PartnerUserListResponse response = api.listUsingGET1(limit, offset, q);
+        PartnerUserListResponse response = api.listUsingGET4(limit, offset, q);
 
         // TODO: test validations
     }
@@ -142,10 +142,10 @@ public class PartnerUserUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateUsingPOSTTest() throws ApiException {
+    public void updateUsingPOST1Test() throws ApiException {
         String userId = null;
         PartnerUserRequest req = null;
-        PartnerUserResponse response = api.updateUsingPOST(userId, req);
+        PartnerUserResponse response = api.updateUsingPOST1(userId, req);
 
         // TODO: test validations
     }
