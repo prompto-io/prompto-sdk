@@ -44,9 +44,9 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void deleteUsingPOST1Test() throws ApiException {
+    public void deleteUsingPOST2Test() throws ApiException {
         String planId = null;
-        RestResponse response = api.deleteUsingPOST1(planId);
+        RestResponse response = api.deleteUsingPOST2(planId);
 
         // TODO: test validations
     }
@@ -60,9 +60,9 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getUsingGET2Test() throws ApiException {
+    public void getUsingGET3Test() throws ApiException {
         String planId = null;
-        PlanResponse response = api.getUsingGET2(planId);
+        PlanResponse response = api.getUsingGET3(planId);
 
         // TODO: test validations
     }
@@ -76,11 +76,11 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void listUsingGET2Test() throws ApiException {
+    public void listUsingGET5Test() throws ApiException {
         Integer limit = null;
         Integer offset = null;
         String q = null;
-        PlanListResponse response = api.listUsingGET2(limit, offset, q);
+        PlanListResponse response = api.listUsingGET5(limit, offset, q);
 
         // TODO: test validations
     }
@@ -94,9 +94,9 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void publishUsingPOSTTest() throws ApiException {
+    public void publishUsingPOST1Test() throws ApiException {
         String planId = null;
-        PlanResponse response = api.publishUsingPOST(planId);
+        PlanResponse response = api.publishUsingPOST1(planId);
 
         // TODO: test validations
     }
@@ -110,9 +110,9 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void saveUsingPOSTTest() throws ApiException {
+    public void saveUsingPOST1Test() throws ApiException {
         PlanRequest planReq = null;
-        PlanResponse response = api.saveUsingPOST(planReq);
+        PlanResponse response = api.saveUsingPOST1(planReq);
 
         // TODO: test validations
     }
@@ -126,9 +126,9 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void unpublishUsingPOSTTest() throws ApiException {
+    public void unpublishUsingPOST2Test() throws ApiException {
         String planId = null;
-        PlanResponse response = api.unpublishUsingPOST(planId);
+        PlanResponse response = api.unpublishUsingPOST2(planId);
 
         // TODO: test validations
     }
@@ -142,10 +142,10 @@ public class PlanUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateUsingPOST1Test() throws ApiException {
+    public void updateUsingPOST2Test() throws ApiException {
         String planId = null;
         PlanRequest planReq = null;
-        PlanResponse response = api.updateUsingPOST1(planId, planReq);
+        PlanResponse response = api.updateUsingPOST2(planId, planReq);
 
         // TODO: test validations
     }

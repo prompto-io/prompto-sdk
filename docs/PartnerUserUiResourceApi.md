@@ -1,16 +1,16 @@
 # PartnerUserUiResourceApi
 
-All URIs are relative to *https://localhost:8080/web-ui-api*
+All URIs are relative to *https://https://prompto.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activateUsingPOST**](PartnerUserUiResourceApi.md#activateUsingPOST) | **POST** /api/v1/partner-users/{userId}/activate | activate
-[**createUsingPOST**](PartnerUserUiResourceApi.md#createUsingPOST) | **POST** /api/v1/partner-users | create
+[**createUsingPOST1**](PartnerUserUiResourceApi.md#createUsingPOST1) | **POST** /api/v1/partner-users | create
 [**deactivateUsingPOST**](PartnerUserUiResourceApi.md#deactivateUsingPOST) | **POST** /api/v1/partner-users/{userId}/deactivate | deactivate
-[**deleteUsingPOST**](PartnerUserUiResourceApi.md#deleteUsingPOST) | **POST** /api/v1/partner-users/{userId}/delete | delete
-[**getUsingGET1**](PartnerUserUiResourceApi.md#getUsingGET1) | **GET** /api/v1/partner-users/{userId} | get
-[**listUsingGET1**](PartnerUserUiResourceApi.md#listUsingGET1) | **GET** /api/v1/partner-users | list
-[**updateUsingPOST**](PartnerUserUiResourceApi.md#updateUsingPOST) | **POST** /api/v1/partner-users/{userId} | update
+[**deleteUsingPOST1**](PartnerUserUiResourceApi.md#deleteUsingPOST1) | **POST** /api/v1/partner-users/{userId}/delete | delete
+[**getUsingGET2**](PartnerUserUiResourceApi.md#getUsingGET2) | **GET** /api/v1/partner-users/{userId} | get
+[**listUsingGET4**](PartnerUserUiResourceApi.md#listUsingGET4) | **GET** /api/v1/partner-users | list
+[**updateUsingPOST1**](PartnerUserUiResourceApi.md#updateUsingPOST1) | **POST** /api/v1/partner-users/{userId} | update
 
 
 <a name="activateUsingPOST"></a>
@@ -28,15 +28,9 @@ activate
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 String userId = "userId_example"; // String | userId
 try {
     PartnerUserResponse result = apiInstance.activateUsingPOST(userId);
@@ -66,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="createUsingPOST"></a>
-# **createUsingPOST**
-> PartnerUserResponse createUsingPOST(req)
+<a name="createUsingPOST1"></a>
+# **createUsingPOST1**
+> PartnerUserResponse createUsingPOST1(req)
 
 create
 
@@ -81,21 +75,15 @@ create
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 PartnerUserRequest req = new PartnerUserRequest(); // PartnerUserRequest | req
 try {
-    PartnerUserResponse result = apiInstance.createUsingPOST(req);
+    PartnerUserResponse result = apiInstance.createUsingPOST1(req);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PartnerUserUiResourceApi#createUsingPOST");
+    System.err.println("Exception when calling PartnerUserUiResourceApi#createUsingPOST1");
     e.printStackTrace();
 }
 ```
@@ -134,15 +122,9 @@ deactivate
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 String userId = "userId_example"; // String | userId
 try {
     PartnerUserResponse result = apiInstance.deactivateUsingPOST(userId);
@@ -172,9 +154,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="deleteUsingPOST"></a>
-# **deleteUsingPOST**
-> RestResponse deleteUsingPOST(userId)
+<a name="deleteUsingPOST1"></a>
+# **deleteUsingPOST1**
+> RestResponse deleteUsingPOST1(userId)
 
 delete
 
@@ -187,21 +169,15 @@ delete
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 String userId = "userId_example"; // String | userId
 try {
-    RestResponse result = apiInstance.deleteUsingPOST(userId);
+    RestResponse result = apiInstance.deleteUsingPOST1(userId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PartnerUserUiResourceApi#deleteUsingPOST");
+    System.err.println("Exception when calling PartnerUserUiResourceApi#deleteUsingPOST1");
     e.printStackTrace();
 }
 ```
@@ -225,9 +201,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="getUsingGET1"></a>
-# **getUsingGET1**
-> PartnerUserResponse getUsingGET1(userId)
+<a name="getUsingGET2"></a>
+# **getUsingGET2**
+> PartnerUserResponse getUsingGET2(userId)
 
 get
 
@@ -240,21 +216,15 @@ get
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 String userId = "userId_example"; // String | userId
 try {
-    PartnerUserResponse result = apiInstance.getUsingGET1(userId);
+    PartnerUserResponse result = apiInstance.getUsingGET2(userId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PartnerUserUiResourceApi#getUsingGET1");
+    System.err.println("Exception when calling PartnerUserUiResourceApi#getUsingGET2");
     e.printStackTrace();
 }
 ```
@@ -278,9 +248,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="listUsingGET1"></a>
-# **listUsingGET1**
-> PartnerUserListResponse listUsingGET1(limit, offset, q)
+<a name="listUsingGET4"></a>
+# **listUsingGET4**
+> PartnerUserListResponse listUsingGET4(limit, offset, q)
 
 list
 
@@ -293,23 +263,17 @@ list
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 Integer limit = 25; // Integer | limit
 Integer offset = 0; // Integer | offset
 String q = "q_example"; // String | q
 try {
-    PartnerUserListResponse result = apiInstance.listUsingGET1(limit, offset, q);
+    PartnerUserListResponse result = apiInstance.listUsingGET4(limit, offset, q);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PartnerUserUiResourceApi#listUsingGET1");
+    System.err.println("Exception when calling PartnerUserUiResourceApi#listUsingGET4");
     e.printStackTrace();
 }
 ```
@@ -335,9 +299,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="updateUsingPOST"></a>
-# **updateUsingPOST**
-> PartnerUserResponse updateUsingPOST(userId, req)
+<a name="updateUsingPOST1"></a>
+# **updateUsingPOST1**
+> PartnerUserResponse updateUsingPOST1(userId, req)
 
 update
 
@@ -350,22 +314,16 @@ update
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PartnerUserUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi();
+PartnerUserUiResourceApi apiInstance = new PartnerUserUiResourceApi(defaultClient);
 String userId = "userId_example"; // String | userId
 PartnerUserRequest req = new PartnerUserRequest(); // PartnerUserRequest | req
 try {
-    PartnerUserResponse result = apiInstance.updateUsingPOST(userId, req);
+    PartnerUserResponse result = apiInstance.updateUsingPOST1(userId, req);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PartnerUserUiResourceApi#updateUsingPOST");
+    System.err.println("Exception when calling PartnerUserUiResourceApi#updateUsingPOST1");
     e.printStackTrace();
 }
 ```

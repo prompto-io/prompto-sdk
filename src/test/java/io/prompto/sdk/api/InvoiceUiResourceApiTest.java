@@ -14,8 +14,14 @@
 package io.prompto.sdk.api;
 
 import io.prompto.sdk.api.ApiException;
+import io.prompto.sdk.model.ByteArrayResource;
+import io.prompto.sdk.model.ClearInvoiceRequest;
+import io.prompto.sdk.model.CreateInvoiceRequest;
+import java.io.File;
+import io.prompto.sdk.model.InvoiceClearedResponse;
 import io.prompto.sdk.model.InvoiceListResponse;
 import io.prompto.sdk.model.InvoiceResponse;
+import io.prompto.sdk.model.RestResponse;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +40,7 @@ public class InvoiceUiResourceApiTest {
 
     
     /**
-     * get
+     * attachFile
      *
      * 
      *
@@ -42,9 +48,91 @@ public class InvoiceUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getUsingGETTest() throws ApiException {
+    public void attachFileUsingPOSTTest() throws ApiException {
         String invoiceId = null;
-        InvoiceResponse response = api.getUsingGET(invoiceId);
+        File file = null;
+        RestResponse response = api.attachFileUsingPOST(invoiceId, file);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * cancelInvoice
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void cancelInvoiceUsingPOSTTest() throws ApiException {
+        String invoiceId = null;
+        RestResponse response = api.cancelInvoiceUsingPOST(invoiceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * clearInvoice
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void clearInvoiceUsingPOSTTest() throws ApiException {
+        String invoiceId = null;
+        ClearInvoiceRequest req = null;
+        InvoiceClearedResponse response = api.clearInvoiceUsingPOST(invoiceId, req);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * createInvoice
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createInvoiceUsingPOSTTest() throws ApiException {
+        CreateInvoiceRequest req = null;
+        InvoiceResponse response = api.createInvoiceUsingPOST(req);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * download
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void downloadUsingGETTest() throws ApiException {
+        String invoiceId = null;
+        ByteArrayResource response = api.downloadUsingGET(invoiceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * getDetail
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getDetailUsingGETTest() throws ApiException {
+        String invoiceId = null;
+        InvoiceResponse response = api.getDetailUsingGET(invoiceId);
 
         // TODO: test validations
     }
@@ -58,11 +146,11 @@ public class InvoiceUiResourceApiTest {
      *          if the Api call fails
      */
     @Test
-    public void listUsingGETTest() throws ApiException {
+    public void listUsingGET3Test() throws ApiException {
         Integer limit = null;
         Integer offset = null;
         String q = null;
-        InvoiceListResponse response = api.listUsingGET(limit, offset, q);
+        InvoiceListResponse response = api.listUsingGET3(limit, offset, q);
 
         // TODO: test validations
     }

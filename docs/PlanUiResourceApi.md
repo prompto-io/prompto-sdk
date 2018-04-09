@@ -1,21 +1,21 @@
 # PlanUiResourceApi
 
-All URIs are relative to *https://localhost:8080/web-ui-api*
+All URIs are relative to *https://https://prompto.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteUsingPOST1**](PlanUiResourceApi.md#deleteUsingPOST1) | **POST** /api/v1/plans/{planId}/delete | delete
-[**getUsingGET2**](PlanUiResourceApi.md#getUsingGET2) | **GET** /api/v1/plans/{planId} | get
-[**listUsingGET2**](PlanUiResourceApi.md#listUsingGET2) | **GET** /api/v1/plans | list
-[**publishUsingPOST**](PlanUiResourceApi.md#publishUsingPOST) | **POST** /api/v1/plans/{planId}/publish | publish
-[**saveUsingPOST**](PlanUiResourceApi.md#saveUsingPOST) | **POST** /api/v1/plans | save
-[**unpublishUsingPOST**](PlanUiResourceApi.md#unpublishUsingPOST) | **POST** /api/v1/plans/{planId}/unpublish | unpublish
-[**updateUsingPOST1**](PlanUiResourceApi.md#updateUsingPOST1) | **POST** /api/v1/plans/{planId} | update
+[**deleteUsingPOST2**](PlanUiResourceApi.md#deleteUsingPOST2) | **POST** /api/v1/plans/{planId}/delete | delete
+[**getUsingGET3**](PlanUiResourceApi.md#getUsingGET3) | **GET** /api/v1/plans/{planId} | get
+[**listUsingGET5**](PlanUiResourceApi.md#listUsingGET5) | **GET** /api/v1/plans | list
+[**publishUsingPOST1**](PlanUiResourceApi.md#publishUsingPOST1) | **POST** /api/v1/plans/{planId}/publish | publish
+[**saveUsingPOST1**](PlanUiResourceApi.md#saveUsingPOST1) | **POST** /api/v1/plans | save
+[**unpublishUsingPOST2**](PlanUiResourceApi.md#unpublishUsingPOST2) | **POST** /api/v1/plans/{planId}/unpublish | unpublish
+[**updateUsingPOST2**](PlanUiResourceApi.md#updateUsingPOST2) | **POST** /api/v1/plans/{planId} | update
 
 
-<a name="deleteUsingPOST1"></a>
-# **deleteUsingPOST1**
-> RestResponse deleteUsingPOST1(planId)
+<a name="deleteUsingPOST2"></a>
+# **deleteUsingPOST2**
+> RestResponse deleteUsingPOST2(planId)
 
 delete
 
@@ -28,21 +28,15 @@ delete
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 String planId = "planId_example"; // String | planId
 try {
-    RestResponse result = apiInstance.deleteUsingPOST1(planId);
+    RestResponse result = apiInstance.deleteUsingPOST2(planId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#deleteUsingPOST1");
+    System.err.println("Exception when calling PlanUiResourceApi#deleteUsingPOST2");
     e.printStackTrace();
 }
 ```
@@ -66,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="getUsingGET2"></a>
-# **getUsingGET2**
-> PlanResponse getUsingGET2(planId)
+<a name="getUsingGET3"></a>
+# **getUsingGET3**
+> PlanResponse getUsingGET3(planId)
 
 get
 
@@ -81,21 +75,15 @@ get
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 String planId = "planId_example"; // String | planId
 try {
-    PlanResponse result = apiInstance.getUsingGET2(planId);
+    PlanResponse result = apiInstance.getUsingGET3(planId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#getUsingGET2");
+    System.err.println("Exception when calling PlanUiResourceApi#getUsingGET3");
     e.printStackTrace();
 }
 ```
@@ -119,9 +107,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="listUsingGET2"></a>
-# **listUsingGET2**
-> PlanListResponse listUsingGET2(limit, offset, q)
+<a name="listUsingGET5"></a>
+# **listUsingGET5**
+> PlanListResponse listUsingGET5(limit, offset, q)
 
 list
 
@@ -134,23 +122,17 @@ list
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 Integer limit = 25; // Integer | limit
 Integer offset = 0; // Integer | offset
 String q = "q_example"; // String | q
 try {
-    PlanListResponse result = apiInstance.listUsingGET2(limit, offset, q);
+    PlanListResponse result = apiInstance.listUsingGET5(limit, offset, q);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#listUsingGET2");
+    System.err.println("Exception when calling PlanUiResourceApi#listUsingGET5");
     e.printStackTrace();
 }
 ```
@@ -176,9 +158,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="publishUsingPOST"></a>
-# **publishUsingPOST**
-> PlanResponse publishUsingPOST(planId)
+<a name="publishUsingPOST1"></a>
+# **publishUsingPOST1**
+> PlanResponse publishUsingPOST1(planId)
 
 publish
 
@@ -191,21 +173,15 @@ publish
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 String planId = "planId_example"; // String | planId
 try {
-    PlanResponse result = apiInstance.publishUsingPOST(planId);
+    PlanResponse result = apiInstance.publishUsingPOST1(planId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#publishUsingPOST");
+    System.err.println("Exception when calling PlanUiResourceApi#publishUsingPOST1");
     e.printStackTrace();
 }
 ```
@@ -229,9 +205,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="saveUsingPOST"></a>
-# **saveUsingPOST**
-> PlanResponse saveUsingPOST(planReq)
+<a name="saveUsingPOST1"></a>
+# **saveUsingPOST1**
+> PlanResponse saveUsingPOST1(planReq)
 
 save
 
@@ -244,21 +220,15 @@ save
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 PlanRequest planReq = new PlanRequest(); // PlanRequest | planReq
 try {
-    PlanResponse result = apiInstance.saveUsingPOST(planReq);
+    PlanResponse result = apiInstance.saveUsingPOST1(planReq);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#saveUsingPOST");
+    System.err.println("Exception when calling PlanUiResourceApi#saveUsingPOST1");
     e.printStackTrace();
 }
 ```
@@ -282,9 +252,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="unpublishUsingPOST"></a>
-# **unpublishUsingPOST**
-> PlanResponse unpublishUsingPOST(planId)
+<a name="unpublishUsingPOST2"></a>
+# **unpublishUsingPOST2**
+> PlanResponse unpublishUsingPOST2(planId)
 
 unpublish
 
@@ -297,21 +267,15 @@ unpublish
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 String planId = "planId_example"; // String | planId
 try {
-    PlanResponse result = apiInstance.unpublishUsingPOST(planId);
+    PlanResponse result = apiInstance.unpublishUsingPOST2(planId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#unpublishUsingPOST");
+    System.err.println("Exception when calling PlanUiResourceApi#unpublishUsingPOST2");
     e.printStackTrace();
 }
 ```
@@ -335,9 +299,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="updateUsingPOST1"></a>
-# **updateUsingPOST1**
-> PlanResponse updateUsingPOST1(planId, planReq)
+<a name="updateUsingPOST2"></a>
+# **updateUsingPOST2**
+> PlanResponse updateUsingPOST2(planId, planReq)
 
 update
 
@@ -350,22 +314,16 @@ update
 //import io.prompto.sdk.api.auth.*;
 //import io.prompto.sdk.api.PlanUiResourceApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+      ApiClient defaultClient = new ApiClient("<partner>", "<apikey>", "<secretKey");
 
-// Configure API key authorization: Authorization
-ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-Authorization.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Authorization.setApiKeyPrefix("Token");
-
-PlanUiResourceApi apiInstance = new PlanUiResourceApi();
+PlanUiResourceApi apiInstance = new PlanUiResourceApi(defaultClient);
 String planId = "planId_example"; // String | planId
 PlanRequest planReq = new PlanRequest(); // PlanRequest | planReq
 try {
-    PlanResponse result = apiInstance.updateUsingPOST1(planId, planReq);
+    PlanResponse result = apiInstance.updateUsingPOST2(planId, planReq);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PlanUiResourceApi#updateUsingPOST1");
+    System.err.println("Exception when calling PlanUiResourceApi#updateUsingPOST2");
     e.printStackTrace();
 }
 ```

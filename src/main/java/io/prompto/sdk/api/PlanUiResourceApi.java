@@ -58,14 +58,14 @@ public class PlanUiResourceApi {
     }
 
     /**
-     * Build call for deleteUsingPOST1
+     * Build call for deleteUsingPOST2
      * @param planId planId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteUsingPOST1Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteUsingPOST2Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -108,15 +108,15 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteUsingPOST1ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deleteUsingPOST2ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planId' is set
         if (planId == null) {
-            throw new ApiException("Missing the required parameter 'planId' when calling deleteUsingPOST1(Async)");
+            throw new ApiException("Missing the required parameter 'planId' when calling deleteUsingPOST2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = deleteUsingPOST1Call(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteUsingPOST2Call(planId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -128,8 +128,8 @@ public class PlanUiResourceApi {
      * @return RestResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestResponse deleteUsingPOST1(String planId) throws ApiException {
-        ApiResponse<RestResponse> resp = deleteUsingPOST1WithHttpInfo(planId);
+    public RestResponse deleteUsingPOST2(String planId) throws ApiException {
+        ApiResponse<RestResponse> resp = deleteUsingPOST2WithHttpInfo(planId);
         return resp.getData();
     }
 
@@ -140,8 +140,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;RestResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestResponse> deleteUsingPOST1WithHttpInfo(String planId) throws ApiException {
-        com.squareup.okhttp.Call call = deleteUsingPOST1ValidateBeforeCall(planId, null, null);
+    public ApiResponse<RestResponse> deleteUsingPOST2WithHttpInfo(String planId) throws ApiException {
+        com.squareup.okhttp.Call call = deleteUsingPOST2ValidateBeforeCall(planId, null, null);
         Type localVarReturnType = new TypeToken<RestResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -154,7 +154,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteUsingPOST1Async(String planId, final ApiCallback<RestResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteUsingPOST2Async(String planId, final ApiCallback<RestResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -175,20 +175,20 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteUsingPOST1ValidateBeforeCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteUsingPOST2ValidateBeforeCall(planId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getUsingGET2
+     * Build call for getUsingGET3
      * @param planId planId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsingGET2Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsingGET3Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -231,15 +231,15 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsingGET2ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsingGET3ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planId' is set
         if (planId == null) {
-            throw new ApiException("Missing the required parameter 'planId' when calling getUsingGET2(Async)");
+            throw new ApiException("Missing the required parameter 'planId' when calling getUsingGET3(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getUsingGET2Call(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsingGET3Call(planId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -251,8 +251,8 @@ public class PlanUiResourceApi {
      * @return PlanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanResponse getUsingGET2(String planId) throws ApiException {
-        ApiResponse<PlanResponse> resp = getUsingGET2WithHttpInfo(planId);
+    public PlanResponse getUsingGET3(String planId) throws ApiException {
+        ApiResponse<PlanResponse> resp = getUsingGET3WithHttpInfo(planId);
         return resp.getData();
     }
 
@@ -263,8 +263,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanResponse> getUsingGET2WithHttpInfo(String planId) throws ApiException {
-        com.squareup.okhttp.Call call = getUsingGET2ValidateBeforeCall(planId, null, null);
+    public ApiResponse<PlanResponse> getUsingGET3WithHttpInfo(String planId) throws ApiException {
+        com.squareup.okhttp.Call call = getUsingGET3ValidateBeforeCall(planId, null, null);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -277,7 +277,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsingGET2Async(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsingGET3Async(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -298,13 +298,13 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsingGET2ValidateBeforeCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsingGET3ValidateBeforeCall(planId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for listUsingGET2
+     * Build call for listUsingGET5
      * @param limit limit (optional, default to 25)
      * @param offset offset (optional, default to 0)
      * @param q q (optional)
@@ -313,7 +313,7 @@ public class PlanUiResourceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listUsingGET2Call(Integer limit, Integer offset, String q, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call listUsingGET5Call(Integer limit, Integer offset, String q, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -361,10 +361,10 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listUsingGET2ValidateBeforeCall(Integer limit, Integer offset, String q, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listUsingGET5ValidateBeforeCall(Integer limit, Integer offset, String q, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = listUsingGET2Call(limit, offset, q, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listUsingGET5Call(limit, offset, q, progressListener, progressRequestListener);
         return call;
 
     }
@@ -378,8 +378,8 @@ public class PlanUiResourceApi {
      * @return PlanListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanListResponse listUsingGET2(Integer limit, Integer offset, String q) throws ApiException {
-        ApiResponse<PlanListResponse> resp = listUsingGET2WithHttpInfo(limit, offset, q);
+    public PlanListResponse listUsingGET5(Integer limit, Integer offset, String q) throws ApiException {
+        ApiResponse<PlanListResponse> resp = listUsingGET5WithHttpInfo(limit, offset, q);
         return resp.getData();
     }
 
@@ -392,8 +392,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanListResponse> listUsingGET2WithHttpInfo(Integer limit, Integer offset, String q) throws ApiException {
-        com.squareup.okhttp.Call call = listUsingGET2ValidateBeforeCall(limit, offset, q, null, null);
+    public ApiResponse<PlanListResponse> listUsingGET5WithHttpInfo(Integer limit, Integer offset, String q) throws ApiException {
+        com.squareup.okhttp.Call call = listUsingGET5ValidateBeforeCall(limit, offset, q, null, null);
         Type localVarReturnType = new TypeToken<PlanListResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -408,7 +408,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listUsingGET2Async(Integer limit, Integer offset, String q, final ApiCallback<PlanListResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call listUsingGET5Async(Integer limit, Integer offset, String q, final ApiCallback<PlanListResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -429,20 +429,20 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listUsingGET2ValidateBeforeCall(limit, offset, q, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listUsingGET5ValidateBeforeCall(limit, offset, q, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanListResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for publishUsingPOST
+     * Build call for publishUsingPOST1
      * @param planId planId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call publishUsingPOSTCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call publishUsingPOST1Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -485,15 +485,15 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call publishUsingPOSTValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call publishUsingPOST1ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planId' is set
         if (planId == null) {
-            throw new ApiException("Missing the required parameter 'planId' when calling publishUsingPOST(Async)");
+            throw new ApiException("Missing the required parameter 'planId' when calling publishUsingPOST1(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = publishUsingPOSTCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = publishUsingPOST1Call(planId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -505,8 +505,8 @@ public class PlanUiResourceApi {
      * @return PlanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanResponse publishUsingPOST(String planId) throws ApiException {
-        ApiResponse<PlanResponse> resp = publishUsingPOSTWithHttpInfo(planId);
+    public PlanResponse publishUsingPOST1(String planId) throws ApiException {
+        ApiResponse<PlanResponse> resp = publishUsingPOST1WithHttpInfo(planId);
         return resp.getData();
     }
 
@@ -517,8 +517,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanResponse> publishUsingPOSTWithHttpInfo(String planId) throws ApiException {
-        com.squareup.okhttp.Call call = publishUsingPOSTValidateBeforeCall(planId, null, null);
+    public ApiResponse<PlanResponse> publishUsingPOST1WithHttpInfo(String planId) throws ApiException {
+        com.squareup.okhttp.Call call = publishUsingPOST1ValidateBeforeCall(planId, null, null);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -531,7 +531,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call publishUsingPOSTAsync(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call publishUsingPOST1Async(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -552,20 +552,20 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = publishUsingPOSTValidateBeforeCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = publishUsingPOST1ValidateBeforeCall(planId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for saveUsingPOST
+     * Build call for saveUsingPOST1
      * @param planReq planReq (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call saveUsingPOSTCall(PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call saveUsingPOST1Call(PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = planReq;
 
         // create path and map variables
@@ -607,15 +607,15 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call saveUsingPOSTValidateBeforeCall(PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call saveUsingPOST1ValidateBeforeCall(PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planReq' is set
         if (planReq == null) {
-            throw new ApiException("Missing the required parameter 'planReq' when calling saveUsingPOST(Async)");
+            throw new ApiException("Missing the required parameter 'planReq' when calling saveUsingPOST1(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = saveUsingPOSTCall(planReq, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = saveUsingPOST1Call(planReq, progressListener, progressRequestListener);
         return call;
 
     }
@@ -627,8 +627,8 @@ public class PlanUiResourceApi {
      * @return PlanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanResponse saveUsingPOST(PlanRequest planReq) throws ApiException {
-        ApiResponse<PlanResponse> resp = saveUsingPOSTWithHttpInfo(planReq);
+    public PlanResponse saveUsingPOST1(PlanRequest planReq) throws ApiException {
+        ApiResponse<PlanResponse> resp = saveUsingPOST1WithHttpInfo(planReq);
         return resp.getData();
     }
 
@@ -639,8 +639,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanResponse> saveUsingPOSTWithHttpInfo(PlanRequest planReq) throws ApiException {
-        com.squareup.okhttp.Call call = saveUsingPOSTValidateBeforeCall(planReq, null, null);
+    public ApiResponse<PlanResponse> saveUsingPOST1WithHttpInfo(PlanRequest planReq) throws ApiException {
+        com.squareup.okhttp.Call call = saveUsingPOST1ValidateBeforeCall(planReq, null, null);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -653,7 +653,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call saveUsingPOSTAsync(PlanRequest planReq, final ApiCallback<PlanResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call saveUsingPOST1Async(PlanRequest planReq, final ApiCallback<PlanResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -674,20 +674,20 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = saveUsingPOSTValidateBeforeCall(planReq, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = saveUsingPOST1ValidateBeforeCall(planReq, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for unpublishUsingPOST
+     * Build call for unpublishUsingPOST2
      * @param planId planId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call unpublishUsingPOSTCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call unpublishUsingPOST2Call(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -730,15 +730,15 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call unpublishUsingPOSTValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call unpublishUsingPOST2ValidateBeforeCall(String planId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planId' is set
         if (planId == null) {
-            throw new ApiException("Missing the required parameter 'planId' when calling unpublishUsingPOST(Async)");
+            throw new ApiException("Missing the required parameter 'planId' when calling unpublishUsingPOST2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = unpublishUsingPOSTCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = unpublishUsingPOST2Call(planId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -750,8 +750,8 @@ public class PlanUiResourceApi {
      * @return PlanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanResponse unpublishUsingPOST(String planId) throws ApiException {
-        ApiResponse<PlanResponse> resp = unpublishUsingPOSTWithHttpInfo(planId);
+    public PlanResponse unpublishUsingPOST2(String planId) throws ApiException {
+        ApiResponse<PlanResponse> resp = unpublishUsingPOST2WithHttpInfo(planId);
         return resp.getData();
     }
 
@@ -762,8 +762,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanResponse> unpublishUsingPOSTWithHttpInfo(String planId) throws ApiException {
-        com.squareup.okhttp.Call call = unpublishUsingPOSTValidateBeforeCall(planId, null, null);
+    public ApiResponse<PlanResponse> unpublishUsingPOST2WithHttpInfo(String planId) throws ApiException {
+        com.squareup.okhttp.Call call = unpublishUsingPOST2ValidateBeforeCall(planId, null, null);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -776,7 +776,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call unpublishUsingPOSTAsync(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call unpublishUsingPOST2Async(String planId, final ApiCallback<PlanResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -797,13 +797,13 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = unpublishUsingPOSTValidateBeforeCall(planId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = unpublishUsingPOST2ValidateBeforeCall(planId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for updateUsingPOST1
+     * Build call for updateUsingPOST2
      * @param planId planId (required)
      * @param planReq planReq (required)
      * @param progressListener Progress listener
@@ -811,7 +811,7 @@ public class PlanUiResourceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateUsingPOST1Call(String planId, PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call updateUsingPOST2Call(String planId, PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = planReq;
 
         // create path and map variables
@@ -854,20 +854,20 @@ public class PlanUiResourceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateUsingPOST1ValidateBeforeCall(String planId, PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateUsingPOST2ValidateBeforeCall(String planId, PlanRequest planReq, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'planId' is set
         if (planId == null) {
-            throw new ApiException("Missing the required parameter 'planId' when calling updateUsingPOST1(Async)");
+            throw new ApiException("Missing the required parameter 'planId' when calling updateUsingPOST2(Async)");
         }
         
         // verify the required parameter 'planReq' is set
         if (planReq == null) {
-            throw new ApiException("Missing the required parameter 'planReq' when calling updateUsingPOST1(Async)");
+            throw new ApiException("Missing the required parameter 'planReq' when calling updateUsingPOST2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateUsingPOST1Call(planId, planReq, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateUsingPOST2Call(planId, planReq, progressListener, progressRequestListener);
         return call;
 
     }
@@ -880,8 +880,8 @@ public class PlanUiResourceApi {
      * @return PlanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PlanResponse updateUsingPOST1(String planId, PlanRequest planReq) throws ApiException {
-        ApiResponse<PlanResponse> resp = updateUsingPOST1WithHttpInfo(planId, planReq);
+    public PlanResponse updateUsingPOST2(String planId, PlanRequest planReq) throws ApiException {
+        ApiResponse<PlanResponse> resp = updateUsingPOST2WithHttpInfo(planId, planReq);
         return resp.getData();
     }
 
@@ -893,8 +893,8 @@ public class PlanUiResourceApi {
      * @return ApiResponse&lt;PlanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PlanResponse> updateUsingPOST1WithHttpInfo(String planId, PlanRequest planReq) throws ApiException {
-        com.squareup.okhttp.Call call = updateUsingPOST1ValidateBeforeCall(planId, planReq, null, null);
+    public ApiResponse<PlanResponse> updateUsingPOST2WithHttpInfo(String planId, PlanRequest planReq) throws ApiException {
+        com.squareup.okhttp.Call call = updateUsingPOST2ValidateBeforeCall(planId, planReq, null, null);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -908,7 +908,7 @@ public class PlanUiResourceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateUsingPOST1Async(String planId, PlanRequest planReq, final ApiCallback<PlanResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateUsingPOST2Async(String planId, PlanRequest planReq, final ApiCallback<PlanResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -929,7 +929,7 @@ public class PlanUiResourceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateUsingPOST1ValidateBeforeCall(planId, planReq, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateUsingPOST2ValidateBeforeCall(planId, planReq, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<PlanResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
